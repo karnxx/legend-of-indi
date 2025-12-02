@@ -11,5 +11,18 @@ config_version=5
 [application]
 
 config/name="vibirindia"
+run/main_scene="res://scene/levls/test/test.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
