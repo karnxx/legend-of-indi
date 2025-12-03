@@ -8,6 +8,6 @@ class_name PokemonSpecies
 	"hp":50, "atk":50, "def":50, "spa":50, "spd":50, "spe":50
 }
 
-@export var learnset: Array[Dictionary]
+@export var learnset: Array[LearnedMoveData]
 @export var actions: Array[ActionData]
 @export var reversals: Array[ReversalData]

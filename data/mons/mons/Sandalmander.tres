@@ -1,24 +1,24 @@
 [gd_resource type="Resource" script_class="PokemonSpecies" load_steps=6 format=3 uid="uid://opk7cghh4prv"]
 
 [ext_resource type="Script" uid="uid://cowkay3t2cbey" path="res://data/actions/ActionsData.gd" id="1_yhmxh"]
-[ext_resource type="Script" uid="uid://2irgwfrq6mwj" path="res://data/moves/LearnedMoveData.gd" id="2_xogmx"]
 [ext_resource type="Script" uid="uid://tq2b6ajncua5" path="res://data/reversals/ReversalData.gd" id="3_b3mbn"]
 [ext_resource type="Script" uid="uid://vlu3wglnljp" path="res://data/mons/MonSpecies.gd" id="4_cdglt"]
+[ext_resource type="Resource" uid="uid://bauwlwtkabhjl" path="res://data/element/elements/Fire.tres" id="5_yhmxh"]
 [ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="5_ymswy"]
 
 [resource]
 script = ExtResource("4_cdglt")
-name = ""
-types = Array[ExtResource("5_ymswy")]([])
+name = "Sandalmander"
+types = Array[ExtResource("5_ymswy")]([ExtResource("5_yhmxh")])
 base_stats = {
-"atk": 50,
-"def": 50,
-"hp": 50,
-"spa": 50,
-"spd": 50,
-"spe": 50
+"atk": 55,
+"def": 40,
+"hp": 42,
+"spa": 62,
+"spd": 52,
+"spe": 64
 }
-learnset = Array[ExtResource("2_xogmx")]([])
+learnset = Array[Dictionary]([])
 actions = Array[ExtResource("1_yhmxh")]([])
 reversals = Array[ExtResource("3_b3mbn")]([])
 metadata/_custom_type_script = "uid://vlu3wglnljp"

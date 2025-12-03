@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="ElementData" load_steps=4 format=3 uid="uid://df5c36x6ribyp"]
+[gd_resource type="Resource" script_class="ElementData" load_steps=4 format=3 uid="uid://rpprbw6t0cxa"]
 
 [ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="1_2862h"]
-[ext_resource type="Resource" uid="uid://bpqkdks82e6eh" path="res://data/element/elements/Water.tres" id="2_vif8a"]
-[ext_resource type="Resource" uid="uid://bqslvuqke5tgy" path="res://data/element/elements/Fire.tres" id="3_yb3bg"]
+[ext_resource type="Resource" uid="uid://cvxfgts8jwa7q" path="res://data/element/elements/Water.tres" id="2_vif8a"]
+[ext_resource type="Resource" uid="uid://bauwlwtkabhjl" path="res://data/element/elements/Fire.tres" id="3_yb3bg"]
 
 [resource]
 script = ExtResource("1_2862h")
 display_name = "Grass"
-color = Color(0, 0.54902, 0, 1)
+color = Color(0, 0.564706, 0, 1)
 strong_against = Array[ExtResource("1_2862h")]([ExtResource("2_vif8a")])
 weak_against = Array[ExtResource("1_2862h")]([ExtResource("3_yb3bg")])
 resists = Array[ExtResource("1_2862h")]([ExtResource("2_vif8a")])
