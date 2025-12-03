@@ -15,13 +15,17 @@ run/main_scene="res://scene/levls/test/test.tscn"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameData="*res://data/GameData.gd"
+
 [display]
 
 window/stretch/mode="viewport"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray("res://addons/godot_doctor/plugin.cfg", "res://addons/godot_super-wakatime/plugin.cfg")
 
 [rendering]
 

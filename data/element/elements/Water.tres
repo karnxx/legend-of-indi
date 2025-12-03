@@ -1,16 +1,26 @@
 [gd_resource type="Resource" script_class="ElementData" load_steps=4 format=3 uid="uid://cvxfgts8jwa7q"]
 
 [ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="1_cmrvu"]
-[ext_resource type="Resource" uid="uid://bauwlwtkabhjl" path="res://data/element/elements/Fire.tres" id="2_hg467"]
 [ext_resource type="Resource" uid="uid://rpprbw6t0cxa" path="res://data/element/elements/Grass.tres" id="3_mmt6x"]
+
+[sub_resource type="Resource" id="Resource_cxtk1"]
+script = ExtResource("1_cmrvu")
+display_name = "Fire"
+color = Color(0.658641, 0.353118, 0.187685, 1)
+strong_against = Array[ExtResource("1_cmrvu")]([ExtResource("3_mmt6x")])
+weak_against = Array[ExtResource("1_cmrvu")]([null])
+resists = Array[ExtResource("1_cmrvu")]([ExtResource("3_mmt6x")])
+immune_to = Array[ExtResource("1_cmrvu")]([])
+tags = Array[String]([])
+metadata/_custom_type_script = "uid://c7dsdg5ksh3bn"
 
 [resource]
 script = ExtResource("1_cmrvu")
 display_name = "Water"
 color = Color(0.299969, 0.511606, 1, 1)
-strong_against = Array[ExtResource("1_cmrvu")]([ExtResource("2_hg467")])
+strong_against = Array[ExtResource("1_cmrvu")]([SubResource("Resource_cxtk1")])
 weak_against = Array[ExtResource("1_cmrvu")]([ExtResource("3_mmt6x")])
-resists = Array[ExtResource("1_cmrvu")]([ExtResource("2_hg467")])
+resists = Array[ExtResource("1_cmrvu")]([SubResource("Resource_cxtk1")])
 immune_to = Array[ExtResource("1_cmrvu")]([])
 tags = Array[String]([])
 metadata/_custom_type_script = "uid://c7dsdg5ksh3bn"

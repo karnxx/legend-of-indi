@@ -1,10 +1,29 @@
-[gd_resource type="Resource" script_class="PokemonSpecies" load_steps=6 format=3 uid="uid://opk7cghh4prv"]
+[gd_resource type="Resource" script_class="PokemonSpecies" load_steps=15 format=3 uid="uid://opk7cghh4prv"]
 
 [ext_resource type="Script" uid="uid://cowkay3t2cbey" path="res://data/actions/ActionsData.gd" id="1_yhmxh"]
+[ext_resource type="Resource" uid="uid://cqvqfgxny1eph" path="res://data/actions/actions/Rest.tres" id="2_w2kqq"]
+[ext_resource type="Script" uid="uid://2irgwfrq6mwj" path="res://data/moves/LearnedMoveData.gd" id="2_xogmx"]
 [ext_resource type="Script" uid="uid://tq2b6ajncua5" path="res://data/reversals/ReversalData.gd" id="3_b3mbn"]
+[ext_resource type="Resource" uid="uid://dv5dwf1ni2xb5" path="res://data/actions/actions/Wait.tres" id="3_jn2ln"]
+[ext_resource type="Script" uid="uid://kdm838euwkhg" path="res://data/moves/MoveData.gd" id="3_ymswy"]
 [ext_resource type="Script" uid="uid://vlu3wglnljp" path="res://data/mons/MonSpecies.gd" id="4_cdglt"]
+[ext_resource type="Resource" uid="uid://coah1ri8pkbsk" path="res://data/moves/moves/Tackle.tres" id="4_k4gce"]
+[ext_resource type="Resource" uid="uid://d2ip15y4rsgua" path="res://data/moves/moves/Ember.tres" id="5_pjn5c"]
 [ext_resource type="Resource" uid="uid://bauwlwtkabhjl" path="res://data/element/elements/Fire.tres" id="5_yhmxh"]
 [ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="5_ymswy"]
+[ext_resource type="Resource" uid="uid://cnl2rnotrentw" path="res://data/reversals/reversal/Fire.tres" id="9_jgn4r"]
+
+[sub_resource type="Resource" id="Resource_w2kqq"]
+script = ExtResource("2_xogmx")
+move = Array[ExtResource("3_ymswy")]([ExtResource("4_k4gce")])
+level = 1
+metadata/_custom_type_script = "uid://2irgwfrq6mwj"
+
+[sub_resource type="Resource" id="Resource_xogmx"]
+script = ExtResource("2_xogmx")
+move = Array[ExtResource("3_ymswy")]([ExtResource("5_pjn5c")])
+level = 1
+metadata/_custom_type_script = "uid://2irgwfrq6mwj"
 
 [resource]
 script = ExtResource("4_cdglt")
@@ -18,7 +37,7 @@ base_stats = {
 "spd": 52,
 "spe": 64
 }
-learnset = Array[Dictionary]([])
-actions = Array[ExtResource("1_yhmxh")]([])
-reversals = Array[ExtResource("3_b3mbn")]([])
+learnset = Array[ExtResource("2_xogmx")]([SubResource("Resource_w2kqq"), SubResource("Resource_xogmx")])
+actions = Array[ExtResource("1_yhmxh")]([ExtResource("2_w2kqq"), ExtResource("3_jn2ln")])
+reversals = Array[ExtResource("3_b3mbn")]([ExtResource("9_jgn4r")])
 metadata/_custom_type_script = "uid://vlu3wglnljp"
