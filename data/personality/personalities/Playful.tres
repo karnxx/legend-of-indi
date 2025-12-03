@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="PersonalityData" load_steps=2 format=3 uid="uid://c7h3selhne1v5"]
+
+[ext_resource type="Script" uid="uid://d287qwsp24v0p" path="res://data/personality/PersonalityData.gd" id="1_5sdbx"]
+
+[resource]
+script = ExtResource("1_5sdbx")
+display_name = "Playful"
+mood_bias = {
+"aggressive": -0.2,
+"anxious": -0.2,
+"calm": -0.1,
+"lazy": -0.1,
+"playful": 0.5
+}
+loyalty_base = 60
+wild_behavior = 2
+inc_stat = 4
+dec_stat = 1
+description = "Easily distracted, energetic, and loves toys."
+metadata/_custom_type_script = "uid://d287qwsp24v0p"

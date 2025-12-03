@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="PersonalityData" load_steps=2 format=3 uid="uid://c4oaedxq4oic3"]
+
+[ext_resource type="Script" uid="uid://d287qwsp24v0p" path="res://data/personality/PersonalityData.gd" id="1_hvxpo"]
+
+[resource]
+script = ExtResource("1_hvxpo")
+display_name = "Monastic"
+mood_bias = {
+"aggressive": -0.5,
+"anxious": -0.4,
+"calm": 0.8,
+"lazy": 0.0,
+"playful": -0.3
+}
+loyalty_base = 90
+wild_behavior = 0
+inc_stat = 3
+dec_stat = 0
+description = "Meditative, peaceful, and rarely resorts to violence."
+metadata/_custom_type_script = "uid://d287qwsp24v0p"

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="PersonalityData" load_steps=2 format=3 uid="uid://xbo5fhyf1l1h"]
+
+[ext_resource type="Script" uid="uid://d287qwsp24v0p" path="res://data/personality/PersonalityData.gd" id="1_pcnri"]
+
+[resource]
+script = ExtResource("1_pcnri")
+display_name = "Stubborn"
+mood_bias = {
+"aggressive": 0.4,
+"anxious": 0.0,
+"calm": -0.2,
+"lazy": 0.0,
+"playful": -0.1
+}
+loyalty_base = 30
+wild_behavior = 4
+inc_stat = 0
+dec_stat = 4
+description = "Difficult to command but fiercely loyal once bonded."
+metadata/_custom_type_script = "uid://d287qwsp24v0p"

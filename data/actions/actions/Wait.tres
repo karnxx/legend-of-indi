@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ActionData" load_steps=2 format=3 uid="uid://dv5dwf1ni2xb5"]
+
+[ext_resource type="Script" uid="uid://cowkay3t2cbey" path="res://data/actions/ActionsData.gd" id="1_5p3qi"]
+
+[resource]
+script = ExtResource("1_5p3qi")
+stamina_cost = -10
+fatigue_change = 0
+description = "Wait for a turn."
+metadata/_custom_type_script = "uid://cowkay3t2cbey"

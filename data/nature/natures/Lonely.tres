@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="NatureData" load_steps=2 format=3 uid="uid://cjy8p8ppmrofu"]
+
+[ext_resource type="Script" uid="uid://bjvf342jyt5" path="res://data/nature/NatureData.gd" id="1_s4u0x"]
+
+[resource]
+script = ExtResource("1_s4u0x")
+inc_stat = 0
+dec_stat = 1
+metadata/_custom_type_script = "uid://bjvf342jyt5"

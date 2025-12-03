@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="ActionData" load_steps=2 format=3 uid="uid://cqvqfgxny1eph"]
+
+[ext_resource type="Script" uid="uid://cowkay3t2cbey" path="res://data/actions/ActionsData.gd" id="1_qeu73"]
+
+[resource]
+script = ExtResource("1_qeu73")
+stamina_cost = -20
+fatigue_change = -2
+description = "Rests for a turn, Left vulnerable."
+metadata/_custom_type_script = "uid://cowkay3t2cbey"
