@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=6 format=3 uid="uid://d2ip15y4rsgua"]
+
+[ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="1_gfqsl"]
+[ext_resource type="Resource" uid="uid://bqslvuqke5tgy" path="res://data/element/elements/Fire.tres" id="2_5vmtp"]
+[ext_resource type="Script" uid="uid://kdm838euwkhg" path="res://data/moves/MoveData.gd" id="3_p4awo"]
+[ext_resource type="Script" uid="uid://cegndqp6qrywo" path="res://data/status_effects/StatusEffect.gd" id="4_j46m7"]
+[ext_resource type="Resource" uid="uid://d2h3yciu37rjt" path="res://data/status_effects/effects/Burnt.tres" id="5_ahrts"]
+
+[resource]
+script = ExtResource("3_p4awo")
+name = "Ember"
+element = Array[ExtResource("1_gfqsl")]([ExtResource("2_5vmtp")])
+power = 40
+accuracy = 100
+stamina_cost = 8
+category = 0
+status_effects = Array[ExtResource("4_j46m7")]([ExtResource("5_ahrts")])
+status_chance = 0.1
+metadata/_custom_type_script = "uid://kdm838euwkhg"

@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="StatusEffect" load_steps=4 format=3 uid="uid://d2h3yciu37rjt"]
+
+[ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="1_dffgs"]
+[ext_resource type="Script" uid="uid://cegndqp6qrywo" path="res://data/status_effects/StatusEffect.gd" id="1_i8e2m"]
+[ext_resource type="Resource" uid="uid://bqslvuqke5tgy" path="res://data/element/elements/Fire.tres" id="2_f472y"]
+
+[resource]
+script = ExtResource("1_i8e2m")
+display_name = "Burnt"
+kind = "dmging"
+elements = Array[ExtResource("1_dffgs")]([ExtResource("2_f472y")])
+stat_mult = {
+"atk": 1.0,
+"def": 1.0,
+"spa": 1.0,
+"spd": 0.9,
+"spe": 0.9
+}
+hp_change_per_turn = 10
+stamina_change_per_turn = 5
+stamina_multiplier = 0.9
+fatigue_per_action = 1
+can_attack = true
+can_dodge = true
+self_harm_chance = 0.0
+duration_min = 1
+duration_max = 100000
+metadata/_custom_type_script = "uid://cegndqp6qrywo"

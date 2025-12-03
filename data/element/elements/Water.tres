@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ElementData" load_steps=4 format=3 uid="uid://bpqkdks82e6eh"]
+
+[ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="1_cmrvu"]
+[ext_resource type="Resource" uid="uid://bqslvuqke5tgy" path="res://data/element/elements/Fire.tres" id="2_hg467"]
+[ext_resource type="Resource" uid="uid://df5c36x6ribyp" path="res://data/element/elements/Grass.tres" id="3_mmt6x"]
+
+[resource]
+script = ExtResource("1_cmrvu")
+display_name = "Water"
+color = Color(0.178605, 0.410125, 1, 1)
+strong_against = Array[ExtResource("1_cmrvu")]([ExtResource("2_hg467")])
+weak_against = Array[ExtResource("1_cmrvu")]([ExtResource("3_mmt6x")])
+resists = Array[ExtResource("1_cmrvu")]([ExtResource("2_hg467")])
+immune_to = Array[ExtResource("1_cmrvu")]([])
+tags = Array[String]([])
+metadata/_custom_type_script = "uid://c7dsdg5ksh3bn"
