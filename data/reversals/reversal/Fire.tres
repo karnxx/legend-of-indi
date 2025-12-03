@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ReversalData" load_steps=4 format=3 uid="uid://cnl2rnotrentw"]
 
 [ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="1_xo605"]
-[ext_resource type="Resource" uid="uid://cvxfgts8jwa7q" path="res://data/element/elements/Water.tres" id="2_8vk32"]
+[ext_resource type="Resource" uid="uid://cfkoa2pyfvwfl" path="res://data/element/elements/Water.tres" id="2_8vk32"]
 [ext_resource type="Script" uid="uid://tq2b6ajncua5" path="res://data/reversals/ReversalData.gd" id="2_ovwd1"]
 
 [resource]

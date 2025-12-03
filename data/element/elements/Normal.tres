@@ -1,14 +1,15 @@
-[gd_resource type="Resource" script_class="ElementData" load_steps=2 format=3 uid="uid://1748jn221phq"]
+[gd_resource type="Resource" script_class="ElementData" load_steps=2 format=3 uid="uid://cyatgeg8ep50v"]
 
 [ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="1_04rgh"]
 
 [resource]
 script = ExtResource("1_04rgh")
+element_type = 0
 display_name = "Normal"
-color = Color(0.873298, 0.873298, 0.873298, 1)
-strong_against = Array[ExtResource("1_04rgh")]([])
-weak_against = Array[ExtResource("1_04rgh")]([])
-resists = Array[ExtResource("1_04rgh")]([])
-immune_to = Array[ExtResource("1_04rgh")]([])
+color = Color(0.721775, 0.725807, 0.62725, 1)
+strong_against = Array[int]([])
+weak_against = Array[int]([])
+resists = Array[int]([])
+immune_to = Array[int]([])
 tags = Array[String]([])
 metadata/_custom_type_script = "uid://c7dsdg5ksh3bn"

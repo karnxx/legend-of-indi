@@ -9,7 +9,7 @@
 [ext_resource type="Script" uid="uid://vlu3wglnljp" path="res://data/mons/MonSpecies.gd" id="4_cdglt"]
 [ext_resource type="Resource" uid="uid://coah1ri8pkbsk" path="res://data/moves/moves/Tackle.tres" id="4_k4gce"]
 [ext_resource type="Resource" uid="uid://d2ip15y4rsgua" path="res://data/moves/moves/Ember.tres" id="5_pjn5c"]
-[ext_resource type="Resource" uid="uid://bauwlwtkabhjl" path="res://data/element/elements/Fire.tres" id="5_yhmxh"]
+[ext_resource type="Resource" uid="uid://dsu1ytigx7dj6" path="res://data/element/elements/Fire.tres" id="5_yhmxh"]
 [ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="5_ymswy"]
 [ext_resource type="Resource" uid="uid://cnl2rnotrentw" path="res://data/reversals/reversal/Fire.tres" id="9_jgn4r"]
 
