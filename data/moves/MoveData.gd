@@ -1,8 +1,9 @@
 extends Resource
 class_name MoveData
+enum ElementType { NORMAL, FIRE, WATER, GRASS }
 
 @export var name: String
-@export var element: Array[ElementData]
+@export var element_type: ElementType
 @export var power: int
 @export var accuracy: int
 @export var stamina_cost: int

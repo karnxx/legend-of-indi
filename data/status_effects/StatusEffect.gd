@@ -1,10 +1,10 @@
 extends Resource
 class_name StatusEffect
-
 @export var display_name: String
 @export var kind: String
 @export var image : ImageTexture
-@export var elements: Array[ElementData] = []
+enum ElementType { NORMAL, FIRE, WATER, GRASS }
+@export var element_type: ElementType
 
 
 @export var stat_mult := {
