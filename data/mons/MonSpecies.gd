@@ -1,6 +1,6 @@
 extends Resource
 class_name PokemonSpecies
-
+@export var id : int
 @export var name: String
 enum ElementType { NORMAL, FIRE, WATER, GRASS }
 @export var element_type: ElementType

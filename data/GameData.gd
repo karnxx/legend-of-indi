@@ -17,12 +17,9 @@ func _ready():
 	natures = load_all("res://data/nature/natures")
 	personalities = load_all("res://data/personality/personalities" )
 	reversals = load_all("res://data/reversals/reversal" )
-	species = load_all("res://data/mons/mons" )
+	species = load_all("res://data/mons/mons")
 
 
-func _process(delta: float) -> void:
-	print(elements[0].display_name)
-	
 func load_all(path: String) -> Array:
 	var out = []
 	var dir = DirAccess.open(path)

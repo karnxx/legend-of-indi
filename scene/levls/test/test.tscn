@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cypikbaq6iu88"]
+[gd_scene load_steps=6 format=3 uid="uid://cypikbaq6iu88"]
 
 [ext_resource type="Texture2D" uid="uid://drjvwhd5lc0x0" path="res://assets/tilesets/Texture1/TX Tileset Grass.png" id="1_l4qse"]
+[ext_resource type="Script" uid="uid://b0hiva44vqfdc" path="res://script/world/level/test.gd" id="1_ubdil"]
 [ext_resource type="PackedScene" uid="uid://18ydu0mtang5" path="res://scene/plr/plr.tscn" id="2_rt36n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rt36n"]
@@ -1068,6 +1069,7 @@ terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_rt36n")
 
 [node name="test" type="Node2D"]
+script = ExtResource("1_ubdil")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_ubdil")

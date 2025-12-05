@@ -1,14 +1,12 @@
-[gd_resource type="Resource" script_class="MoveData" load_steps=5 format=3 uid="uid://coah1ri8pkbsk"]
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3 uid="uid://coah1ri8pkbsk"]
 
 [ext_resource type="Script" uid="uid://kdm838euwkhg" path="res://data/moves/MoveData.gd" id="1_pesgc"]
-[ext_resource type="Script" uid="uid://c7dsdg5ksh3bn" path="res://data/element/ElementData.gd" id="1_tgcfs"]
-[ext_resource type="Resource" uid="uid://cyatgeg8ep50v" path="res://data/element/elements/Normal.tres" id="2_mb7bm"]
 [ext_resource type="Script" uid="uid://cegndqp6qrywo" path="res://data/status_effects/StatusEffect.gd" id="2_tgcfs"]
 
 [resource]
 script = ExtResource("1_pesgc")
 name = "Tackle"
-element = Array[ExtResource("1_tgcfs")]([ExtResource("2_mb7bm")])
+element_type = 0
 power = 40
 accuracy = 100
 stamina_cost = 6
