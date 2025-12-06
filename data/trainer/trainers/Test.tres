@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Trainer" load_steps=2 format=3 uid="uid://phb5f15k8xf"]
+
+[ext_resource type="Script" uid="uid://ct6bvn1kv3urh" path="res://data/trainer/TrainerData.gd" id="1_43jnx"]
+
+[resource]
+script = ExtResource("1_43jnx")
+name = "Mayukh"
+hp = 100
+max_hp = 100
+stamina = 100
+max_stamina = 100
+fatigue = 0
+metadata/_custom_type_script = "uid://ct6bvn1kv3urh"

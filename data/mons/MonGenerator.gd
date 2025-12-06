@@ -48,7 +48,7 @@ func generate(species: PokemonSpecies, level: int) -> PokemonInstance:
 	
 	inst.stats = final_stats
 	inst.current_hp = final_stats["hp"]
-	inst.stamina = 100
+	inst.stamina = inst.current_hp * inst.multiplier_stm
 	inst.fatigue = 0
 	inst.statuses = []
 	

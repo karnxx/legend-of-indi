@@ -6,7 +6,7 @@ class_name PokemonInstance
 @export var nature: NatureData
 @export var personality: PersonalityData
 @export var current_form: Resource
-
+@export var multiplier_stm := 1.2
 @export var stats := {
 	"hp":0, "atk":0, "def":0, "spa":0, "spd":0, "spe":0
 }

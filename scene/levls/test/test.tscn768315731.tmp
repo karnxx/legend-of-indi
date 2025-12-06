@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cypikbaq6iu88"]
+[gd_scene load_steps=7 format=3 uid="uid://cypikbaq6iu88"]
 
 [ext_resource type="Texture2D" uid="uid://drjvwhd5lc0x0" path="res://assets/tilesets/Texture1/TX Tileset Grass.png" id="1_l4qse"]
 [ext_resource type="Script" uid="uid://b0hiva44vqfdc" path="res://script/world/level/test.gd" id="1_ubdil"]
 [ext_resource type="PackedScene" uid="uid://18ydu0mtang5" path="res://scene/plr/plr.tscn" id="2_rt36n"]
+[ext_resource type="PackedScene" uid="uid://b5qsdiqm2d08h" path="res://battles/scenes/battle.tscn" id="4_ntrh6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rt36n"]
 texture = ExtResource("1_l4qse")
@@ -1078,3 +1079,5 @@ layer_0/tile_data = PackedInt32Array(-131077, 65536, 3, -131076, 393216, 4, -655
 
 [node name="plr" parent="." instance=ExtResource("2_rt36n")]
 position = Vector2(-2, 1)
+
+[node name="Battle" parent="." instance=ExtResource("4_ntrh6")]

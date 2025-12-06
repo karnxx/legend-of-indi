@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed = 300
+var speed = 150
 enum faces {down,left,right,up, rightup, rightdown, leftup, leftdown}
 var facing = faces.down
 

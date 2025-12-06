@@ -1,8 +1,9 @@
-[gd_scene load_steps=46 format=3 uid="uid://18ydu0mtang5"]
+[gd_scene load_steps=47 format=3 uid="uid://18ydu0mtang5"]
 
 [ext_resource type="Script" uid="uid://b7hwg7hn305fn" path="res://script/plr/plr.gd" id="1_txxod"]
 [ext_resource type="Texture2D" uid="uid://dh3drinvax6ea" path="res://assets/spritesheets/player/16x16 Idle-Sheet.png" id="2_1awnj"]
 [ext_resource type="Texture2D" uid="uid://6ku7ss21tyot" path="res://assets/spritesheets/player/16x16 Walk-Sheet.png" id="2_gg6tn"]
+[ext_resource type="PackedScene" uid="uid://b5qsdiqm2d08h" path="res://battles/scenes/battle.tscn" id="4_1awnj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b5st2"]
 atlas = ExtResource("2_1awnj")
@@ -353,3 +354,16 @@ shape = SubResource("CircleShape2D_8avf8")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
+
+[node name="Battle" parent="." instance=ExtResource("4_1awnj")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -192.0
+offset_top = -108.0
+offset_right = -192.0
+offset_bottom = -108.0
+grow_horizontal = 1
+grow_vertical = 1
+scale = Vector2(0.334, 0.334)
