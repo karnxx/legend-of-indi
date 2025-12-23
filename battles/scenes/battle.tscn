@@ -283,37 +283,45 @@ layout_mode = 0
 offset_top = 234.0
 offset_right = 64.0
 offset_bottom = 250.0
+text = "Pokemon atk"
 
 [node name="plr_atk" type="Button" parent="Actions"]
 layout_mode = 0
-offset_top = 250.0
-offset_right = 64.0
-offset_bottom = 266.0
+offset_top = 268.0
+offset_right = 86.0
+offset_bottom = 299.0
+text = "Player atk"
 
 [node name="switch" type="Button" parent="Actions"]
 layout_mode = 0
-offset_top = 266.0
-offset_right = 64.0
-offset_bottom = 282.0
+offset_left = 2.0
+offset_top = 303.0
+offset_right = 102.0
+offset_bottom = 334.0
+text = "switch (wip)"
 
 [node name="item" type="Button" parent="Actions"]
 layout_mode = 0
-offset_top = 282.0
-offset_right = 64.0
-offset_bottom = 298.0
+offset_left = 3.0
+offset_top = 337.0
+offset_right = 89.0
+offset_bottom = 368.0
+text = "item (wip)"
 
 [node name="run" type="Button" parent="Actions"]
 layout_mode = 0
-offset_top = 298.0
-offset_right = 64.0
-offset_bottom = 314.0
+offset_left = 3.0
+offset_top = 368.0
+offset_right = 81.0
+offset_bottom = 399.0
+text = "run (wip)"
 
 [node name="Moves" type="Panel" parent="."]
 layout_mode = 0
-offset_left = 64.0
-offset_top = 233.0
-offset_right = 141.0
-offset_bottom = 312.0
+offset_left = 131.0
+offset_top = 235.0
+offset_right = 208.0
+offset_bottom = 345.0
 
 [node name="move1" type="Button" parent="Moves"]
 layout_mode = 0
@@ -325,30 +333,30 @@ offset_bottom = 27.0
 [node name="move2" type="Button" parent="Moves"]
 layout_mode = 0
 offset_left = 11.0
-offset_top = 27.0
+offset_top = 42.0
 offset_right = 63.0
-offset_bottom = 41.0
+offset_bottom = 56.0
 
 [node name="move3" type="Button" parent="Moves"]
 layout_mode = 0
 offset_left = 11.0
-offset_top = 41.0
+offset_top = 68.0
 offset_right = 63.0
-offset_bottom = 55.0
+offset_bottom = 82.0
 
 [node name="move4" type="Button" parent="Moves"]
 layout_mode = 0
 offset_left = 11.0
-offset_top = 55.0
+offset_top = 93.0
 offset_right = 63.0
-offset_bottom = 69.0
+offset_bottom = 107.0
 
 [node name="Log" type="Label" parent="."]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 319.0
-offset_right = 44.0
-offset_bottom = 342.0
+offset_left = 537.0
+offset_top = 232.0
+offset_right = 718.0
+offset_bottom = 410.0
 
 [node name="Targets" type="Control" parent="."]
 anchors_preset = 0
@@ -372,8 +380,9 @@ offset_bottom = 212.0
 [connection signal="pressed" from="Actions/fight" to="." method="_on_fight_pressed"]
 [connection signal="pressed" from="Actions/plr_atk" to="." method="_on_plr_atk_pressed"]
 [connection signal="pressed" from="Actions/run" to="." method="_on_run_pressed"]
-[connection signal="pressed" from="Moves/move2" to="." method="_on_move_pressed" binds= [NodePath(".")]]
-[connection signal="pressed" from="Moves/move3" to="." method="_on_move_pressed" binds= [NodePath(".")]]
-[connection signal="pressed" from="Moves/move4" to="." method="_on_move_pressed" binds= [NodePath(".")]]
+[connection signal="pressed" from="Moves/move1" to="." method="_on_move1_pressed"]
+[connection signal="pressed" from="Moves/move2" to="." method="_on_move2_pressed"]
+[connection signal="pressed" from="Moves/move3" to="." method="_on_move3_pressed"]
+[connection signal="pressed" from="Moves/move4" to="." method="_on_move4_pressed"]
 [connection signal="pressed" from="Targets/target_trainer" to="." method="_on_target_trainer_pressed"]
 [connection signal="pressed" from="Targets/target_pokemon" to="." method="_on_target_pokemon_pressed"]

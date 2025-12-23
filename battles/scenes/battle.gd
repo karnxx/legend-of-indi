@@ -1,13 +1,13 @@
 extends Control
 
+var pkmn_move_selected := false
+var plr_move_selected := false
+
 func _ready():
 	BattleManager.connect("battle_started", Callable(self, "on_battle_start"))
 	BattleManager.connect("turn_finished", Callable(self, "on_turn_finish"))
 	BattleManager.connect("battle_ended", Callable(self, "on_battle_end"))
-
-	for btn in $Moves.get_children():
-		btn.pressed.connect(func():
-			_on_move_pressed(btn))
+	BattleManager.connect("log_event", Callable(self, "on_log_event"))
 	show_action()
 
 func hide_all():
@@ -22,32 +22,23 @@ func show_action():
 	update_attack_buttons()
 
 func show_move():
+	if BattleManager.player_poke == null:
+		return
 	hide_all()
 	$Moves.show()
 	upd_move()
-	update_attack_buttons()
 
 func show_targets():
 	hide_all()
 	$Targets.show()
 
 func update_attack_buttons():
-	if BattleManager.awaiting_target:
+	if not BattleManager.player_pokemon_action_done and BattleManager.player_poke != null:
 		$Actions/plr_atk.hide()
-		$Actions/fight.hide()
-	else:
+	elif not BattleManager.player_trainer_action_done and BattleManager.player_char != null:
 		$Actions/plr_atk.show()
-		$Actions/fight.show()
-
-func on_battle_start(is_trainer):
-	upd_all()
-
-func on_turn_finish():
-	upd_all()
-	show_action()
-
-func on_battle_end(winner):
-	hide()
+	else:
+		hide_all()
 
 func upd_all():
 	upd_opponent()
@@ -56,68 +47,100 @@ func upd_all():
 func upd_opponent():
 	var pokee = BattleManager.opponent_poke
 	var trainer = BattleManager.opponent_char
-	if pokee != null and pokee.species != null:
+
+	$Opponent/Pokemon.visible = pokee != null
+	$Opponent/Player.visible = trainer != null
+
+	if pokee:
 		$Opponent/Pokemon/nam.text = pokee.species.name
 		$Opponent/Pokemon/hp.text = str(pokee.current_hp) + "/" + str(pokee.stats["hp"])
-	else:
-		$Opponent/Pokemon/nam.text = ""
-		$Opponent/Pokemon/hp.text = ""
-	if trainer != null:
+
+	if trainer:
 		$Opponent/Player/nam.text = trainer.name
 		$Opponent/Player/hp.text = str(trainer.current_hp) + "/" + str(trainer.stats["hp"])
-	else:
-		$Opponent/Player/nam.text = ""
-		$Opponent/Player/hp.text = ""
 
 func upd_player():
 	var poke = BattleManager.player_poke
 	var char = BattleManager.player_char
-	if poke != null and poke.species != null:
+
+	$Player/Pokemon.visible = poke != null
+	$Player/Player.visible = char != null
+
+	if poke:
 		$Player/Pokemon/nam.text = poke.species.name
 		$Player/Pokemon/hp.text = str(poke.current_hp) + "/" + str(poke.stats["hp"])
-	else:
-		$Player/Pokemon/nam.text = ""
-		$Player/Pokemon/hp.text = ""
-	if char != null:
+
+	if char:
 		$Player/Player/nam.text = char.name
 		$Player/Player/hp.text = str(char.current_hp) + "/" + str(char.stats["hp"])
-	else:
-		$Player/Player/nam.text = ""
-		$Player/Player/hp.text = ""
 
 func upd_move():
-	var moves = BattleManager.player_poke.moves
-	for i in range($Moves.get_child_count()):
+	var poke = BattleManager.player_poke
+	if poke == null:
+		return
+	var moves = poke.moves
+	for i in range(4):
 		var btn = $Moves.get_child(i)
-		if i < moves.size() and moves[i] != null:
+		if i < moves.size():
 			btn.text = moves[i].name
-			btn.set_meta("move", moves[i])
 			btn.disabled = false
 		else:
 			btn.text = "---"
-			btn.set_meta("move", null)
 			btn.disabled = true
 
 func _on_fight_pressed():
 	show_move()
 
-func _on_move_pressed(btn: Button):
-	var move = btn.get_meta("move")
-	if move == null:
-		return
-	BattleManager.player_pokemon_use_move(move)
-	show_targets()
-	update_attack_buttons()
+func _on_move1_pressed(): select_move(0)
+func _on_move2_pressed(): select_move(1)
+func _on_move3_pressed(): select_move(2)
+func _on_move4_pressed(): select_move(3)
+
+func select_move(i):
+	var poke = BattleManager.player_poke
+	if poke and i < poke.moves.size():
+		BattleManager.player_select_action(poke, poke.moves[i])
+		show_targets()
 
 func _on_plr_atk_pressed():
-	BattleManager.player_char_use_move(BattleManager.player_char.basic_attack)
-	show_targets()
-	update_attack_buttons()
+	var char = BattleManager.player_char
+	if char:
+		BattleManager.player_select_action(char, char.basic_attack)
+		show_targets()
 
 func _on_target_pokemon_pressed():
-	BattleManager.resolve_player_action(BattleManager.opponent_poke)
-	update_attack_buttons()
+	var t = BattleManager.opponent_poke
+	if t:
+		BattleManager.resolve_player_action(t)
+		after_target()
 
 func _on_target_trainer_pressed():
-	BattleManager.resolve_player_action(BattleManager.opponent_char)
-	update_attack_buttons()
+	var t = BattleManager.opponent_char
+	if t:
+		BattleManager.resolve_player_action(t)
+		after_target()
+
+func after_target():
+	if BattleManager.player_actions_done():
+		hide_all()
+	else:
+		show_action()
+
+func on_battle_start(is_trainer):
+	$Log.text = "Battle started\n"
+	show()
+	upd_all()
+	show_action()
+
+func on_turn_finish():
+	$Log.text += "Turn ended\n\n"
+	upd_all()
+	show_action()
+
+func on_battle_end(winner):
+	$Log.text += winner.capitalize() + " wins\n"
+	print(winner)
+	hide()
+
+func on_log_event(text):
+	$Log.text += text + "\n"

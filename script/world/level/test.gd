@@ -2,12 +2,12 @@ extends Node
 
 func _ready():
 	await get_tree().create_timer(1).timeout
-	var player_poke = MonGenerator.generate(GameData.species[0], 10)
-	var enemy_poke = MonGenerator.generate(GameData.species[0], 8)
+	var player_poke = MonGenerator.generate(GameData.species[0], 7)
+	var enemy_poke = MonGenerator.generate(GameData.species[0], 5)
 
 	var player := PlayerData
-	player.current_hp = 100
-	player.max_hp = 100
+	player.current_hp = randi_range(80,120)
+	player.max_hp = randi_range(80,120)
 	player.stamina = 100
 	player.max_stamina = 100
 	player.fatigue = 0
@@ -19,7 +19,7 @@ func _ready():
 	var enemy_trainer := Trainer.new()
 	enemy_trainer.name = "Enemy Trainer"
 	enemy_trainer.current_hp = 100
-	enemy_trainer.max_hp = 100
+	enemy_trainer.max_hp = randi_range(80,120)
 	enemy_trainer.stamina = 100
 	enemy_trainer.max_stamina = 100
 	enemy_trainer.fatigue = 0
