@@ -350,10 +350,30 @@ offset_top = 319.0
 offset_right = 44.0
 offset_bottom = 342.0
 
+[node name="Targets" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="target_trainer" type="Button" parent="Targets"]
+layout_mode = 0
+offset_left = 710.0
+offset_top = 49.0
+offset_right = 950.0
+offset_bottom = 219.0
+
+[node name="target_pokemon" type="Button" parent="Targets"]
+layout_mode = 0
+offset_left = 320.0
+offset_top = 50.0
+offset_right = 522.0
+offset_bottom = 212.0
+
 [connection signal="pressed" from="Actions/fight" to="." method="_on_fight_pressed"]
 [connection signal="pressed" from="Actions/plr_atk" to="." method="_on_plr_atk_pressed"]
 [connection signal="pressed" from="Actions/run" to="." method="_on_run_pressed"]
-[connection signal="pressed" from="Moves/move1" to="." method="_on_move_pressed" binds= [NodePath(".")]]
 [connection signal="pressed" from="Moves/move2" to="." method="_on_move_pressed" binds= [NodePath(".")]]
 [connection signal="pressed" from="Moves/move3" to="." method="_on_move_pressed" binds= [NodePath(".")]]
 [connection signal="pressed" from="Moves/move4" to="." method="_on_move_pressed" binds= [NodePath(".")]]
+[connection signal="pressed" from="Targets/target_trainer" to="." method="_on_target_trainer_pressed"]
+[connection signal="pressed" from="Targets/target_pokemon" to="." method="_on_target_pokemon_pressed"]

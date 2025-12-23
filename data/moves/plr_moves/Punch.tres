@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="MoveData" load_steps=3 format=3 uid="uid://cktaci7x16bh6"]
+
+[ext_resource type="Script" uid="uid://kdm838euwkhg" path="res://data/moves/MoveData.gd" id="1_8nreg"]
+[ext_resource type="Script" uid="uid://cegndqp6qrywo" path="res://data/status_effects/StatusEffect.gd" id="2_wbx0g"]
+
+[resource]
+script = ExtResource("1_8nreg")
+name = "Punch"
+element_type = 0
+power = 20
+accuracy = 100
+stamina_cost = 10
+category = 1
+status_effects = Array[ExtResource("2_wbx0g")]([])
+status_chance = 0.0
+metadata/_custom_type_script = "uid://kdm838euwkhg"
